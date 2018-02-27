@@ -20,7 +20,6 @@ module Java
       @flags = flags
       @name = name
       @vm_signature = vm_signature
-      #java_signature = vm_signature.scan(/\[?[ZBCSIJFDV]|\[?L[^\;]*;/).map { |m| vm_to_java(m) }
     end
 
     def is_public?
@@ -70,22 +69,5 @@ module Java
     def is_synthetic?
       (@flags & ACC_SYNTHETIC) != 0
     end
-
-  #private
-  #  def vm_to_java(vm_type)
-  #    suffix = vm_type =~ /^\[/ ? "[]" : ""
-  #    case vm_type
-  #    when "V" then "void"
-  #    when "Z" then "boolean"
-  #    when "B" then "byte"
-  #    when "C" then "char"
-  #    when "S" then "short"
-  #    when "I" then "int"
-  #    when "J" then "long"
-  #    when "F" then "float"
-  #    when "D" then "double"
-  #    else vm_type.gsub(/[L;]/, "").gsub("/", ".")
-  #    end + suffix
-  #  end
   end
 end

@@ -113,7 +113,7 @@ module Java
       java_to_jni(java_return_type)
     end
 
-#private
+private
 
     def java_signature
       types = vm_signature.scan(/(\[?([ZBCSIJFDV]|L[^;]*;))/).map do |match|
