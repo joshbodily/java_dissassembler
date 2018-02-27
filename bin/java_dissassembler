@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'java_dissassembler'
+require 'pp'
+
+pp Java::Dissassembler::dissassemble_file(ARGV[0])
