@@ -172,7 +172,7 @@ module Java
           descriptor_index = bytes[3..4].u2
           return 5, [name_index, descriptor_index]
         when CONSTANT_METHODHANDLE
-          reference_kind = bytes[1].u1
+          reference_kind = bytes[1]
           reference_index = bytes[2..3].u2
           return 4, [reference_kind, reference_index]
         when CONSTANT_METHODTYPE

@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = "java_dissassembler"
-  s.version     = "0.0.2"
-  s.date        = "2018-02-22"
+  s.version     = "0.0.3"
+  s.date        = "2018-09-05"
   s.summary     = "Java .class file dissassembler"
   s.description = "A Java .class file dissassembler.  Similar to javap, but w/ no JDK dependencies.  Pure Ruby"
   s.authors     = ["Josh Bodily"]
